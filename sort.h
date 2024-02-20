@@ -40,16 +40,20 @@ typedef struct card_s
  * @next: pointer to the next node on the ist
  */
 
-typedef struct deck_node_s
+typedef struct listint_s
 {
-	const card_t *card;
-	struct deck_node_s *prev;
-	struct deck_node_s *next;
-} deck_node_t;
+	int n;
+	struct listint_s *prev;
+	struct listint_s *next;
+} listint_t;
 
-void sort_deck(deck_node_t **deck);
-int card_value(deck_node_t *node);
+void sort_deck(listint_t **deck);
+int card_value(listint_t *node);
 void print_array(const int *array, size_t size);
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
+void print_list(const listint_t *list);
+void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
+listint_t *create_listint(const int *array, size_t size);
 
 #endif

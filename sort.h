@@ -5,11 +5,11 @@
 #include <stdio.h>
 
 /**
- * struct deck_node_s - deck of cards
+ * struct listint_s - Doubly linked list node
  *
- * @card: pointer to the card on the node
- * @prev: pointer to the previous node on the list
- * @next: pointer to the next node on the ist
+ * @n: Integer stored in the node
+ * @prev: Pointer to the previous element of the list
+ * @next: Pointer to the next element of the list
  */
 
 typedef struct listint_s
